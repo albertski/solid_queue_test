@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Solid Queue Test
 
-Things you may want to cover:
+## 📬 Defined Queues by Urgency
 
-* Ruby version
+This project uses the following queues to categorize jobs based on how urgently they should be processed:
 
-* System dependencies
+| Queue Name | Urgency Level | Description |
+|------------|----------------|-------------|
+| `critical` | 🚨 Highest     | For jobs that must be executed immediately. Examples include billing actions, account locks, or system alerts. |
+| `high`     | 🔥 High         | For time-sensitive but non-critical jobs such as user notifications, confirmation emails, or real-time updates. |
+| `default`  | ⚙️ Normal       | General-purpose queue for standard background jobs that don't require prioritization. |
+| `low`      | 🕒 Low          | For less urgent jobs that can be delayed without affecting user experience, like sending digest emails or syncing data. |
+| `bulk`     | 🐘 Lowest       | For heavy or long-running background tasks that are non-interactive, such as generating reports or archiving records. |
 
-* Configuration
+Each job in the application is explicitly assigned to one of these queues using the `queue_as` directive in its class definition.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Mission Control Password
+You can now access Mission Control – Jobs with:
+ - Username: test
+ - password: Au7eeM97ofFyc32HtEmji5eVpg1QNasXBFSmNfSdjKjDaPNfHNr6YBuRUqKs3Auk
