@@ -1,6 +1,6 @@
-# README
+# Solid Queue Test
 
-Solid Queue Test
+This repo serves as a quick playground of testing the Solid Queue Gem
 
 ## 📬 Defined Queues by Urgency
 
