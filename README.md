@@ -20,3 +20,13 @@ Each job in the application is explicitly assigned to one of these queues using 
 You can now access Mission Control – Jobs with:
  - Username: test
  - password: Au7eeM97ofFyc32HtEmji5eVpg1QNasXBFSmNfSdjKjDaPNfHNr6YBuRUqKs3Auk
+
+## Creating Jobs
+
+```ruby
+1000.times { CriticalJob.perform_later }
+1000.times { HighJob.perform_later }
+1000.times { DefaultJob.perform_later }
+1000.times { LowJob.perform_later }
+1000.times { BulkJob.perform_later }
+```
